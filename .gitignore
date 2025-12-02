@@ -1,0 +1,28 @@
+# Data
+cifar10/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs
+logs/
+*.log
+
+# PyTorch
+*.pt
+*.pth
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
