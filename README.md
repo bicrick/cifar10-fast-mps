@@ -32,6 +32,18 @@ This implementation uses Apple's Metal Performance Shaders (MPS) backend instead
 ### Relative Speedups Still Hold
 Despite the absolute performance gap, the relative improvements from each technique remain valid. If alternating flip provides a 15% speedup on A100, you'll see a similar relative gain on MPS.
 
+### Benchmark Results (M3 MPS)
+
+| Method | Epochs | Accuracy | Total Time | Time/Epoch |
+|--------|--------|----------|------------|------------|
+| Baseline (ResNet-18) | 10 | 89.56% | 339.08s | 33.91s |
+| airbench94 | 10 | 93.82% | 67.04s | 6.70s |
+| airbench95 | 15 | 95.12% | 199.51s | 13.30s |
+
+**Speedup vs Baseline:**
+- **airbench94:** 5.1x faster (67s vs 339s) with +4.3% accuracy
+- **airbench95:** 1.7x faster (200s vs 339s) with +5.6% accuracy
+
 ## Key Techniques
 
 The paper introduces several optimizations that together achieve significant speedups:
